@@ -81,11 +81,7 @@ const insertNodeToBinaryTree = (arr, root, i) => {
 
     root.left = insertNodeToBinaryTree(arr, root.left, 2 * i + 1)
   }
-
-
 }
-
-
 
 
 const flatten = (root) => {
@@ -110,7 +106,6 @@ const flatten = (root) => {
     dfs(right)
   }
   dfs(root)
-  return head;
 }
 
 console.log(flatten(result))
