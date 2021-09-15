@@ -53,4 +53,5 @@ const divisorGame = (n) => {
 
 }
 
+// O(n)
 console.log(divisorGame(3));
