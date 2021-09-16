@@ -32,22 +32,33 @@ haystack and needle consist of only lower-case English characters.
 
 const strStr = (haystack, needle) => {
 
-  if (haystack === needle) {
-    return 0
+  // if (haystack === needle) {
+  //   return 0
+  // }
+
+  // let start = 0;
+  // let window = needle.length;
+
+  // while (window <= haystack.length) {
+  //   if (haystack.slice(start, window) === needle) {
+  //     return start;
+  //   } else {
+  //     start++;
+  //     window++;
+  //   }
+  // }
+  // return -1;
+
+  if (haystack === needle || needle.length === 0) {
+    return 0;
   }
 
-  let start = 0;
-  let window = needle.length;
-
-  while (window <= haystack.length) {
-    if (haystack.slice(start, window) === needle) {
-      return start;
-    } else {
-      start++;
-      window++;
-    }
+  if (haystack.split(needle)[0].length < haystack.length) {
+    return haystack.split(needle)[0].length;
+  } else {
+    return -1;
   }
-  return -1;
+
 }
 
 console.log(strStr('hello', 'll'));
